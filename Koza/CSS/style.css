@@ -1,0 +1,350 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Gabriela", serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    background: linear-gradient(to right, #a3eeee, #e580ac);
+    min-height: 100vh !important;
+    overflow: hidden;
+}
+header{
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: #fff;
+    opacity: .7;
+    z-index: -1;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.05);
+    z-index: 1000;
+}
+.logo{
+    height: 60px;
+    line-height: 60px;
+    color: #000;
+    font-family: "Monoton", cursive !important;
+    font-size: 3em;
+    text-decoration: none;
+    cursor: pointer;
+    padding-left: 20px;
+    z-index: 10;
+    transition: .5s ease-in-out;
+}
+.logo:hover{
+    color: #e580ac;
+}
+#toggle{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
+    background: #12ecec;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+    z-index: 1;
+}
+#toggle::before{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+#toggle::after{
+    content: '';
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    transform: translateY(5px);
+    transition: 0.3s;
+}
+#toggle.active::before{
+    transform: translateY(0px) rotate(45deg);
+}
+#toggle.active::after{
+    transform: translateY(0px) rotate(-45deg);
+}
+#toggle.active{
+    background: #e580ac;
+}
+#navbar{
+    position: relative;
+    height: 60px;
+    right: 60px;
+    background: #fff;
+    transition: 0.5s;
+    width: 0px;
+    overflow: hidden;
+}
+#navbar.active{
+    width: 660px;
+}
+#navbar ul{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+#navbar ul li{
+    list-style: none;
+}
+#navbar ul li a{
+    color: #12334e;
+    height: 60px;
+    line-height: 60px;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 0 15px;
+    letter-spacing: 2px;
+}
+#navbar ul li a:hover{
+    color: #000;
+    background: #a3eeee;
+}
+/* section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #f5f5f5;
+    font-size: 18vh;
+    font-weight: 700;
+} */
+
+@media(max-width:991px){
+    #navbar{
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        width: 100%;
+        transition: 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 60px);
+    }
+    header{
+        opacity: .9;
+    }
+    
+    #navbar.active{        
+        height: calc(100vh - 60px);
+        bottom: 0;
+        width: 100%;
+    }
+    #navbar ul{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+section{
+    width: 80%;
+    position: relative;
+    display: flex;
+    text-align: center;
+    margin-top: 12%;
+    /* margin-left: -15%; */
+    margin-left: 18%;
+}
+.row .text-box{
+    display: flex;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.text-box p{
+    width: 470px;
+    padding-top: 7px;
+    font-size: 18px;
+    margin-right: 150px;
+    /* flex: 1; */
+    align-items: center;
+}
+.text-box input{
+    font-size: 18px;
+    text-align: center;
+    /* margin-left: -25%; */
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.calc-btn{
+    max-width: 150px !important;
+    margin-left: 27% !important;
+    padding: 10px 5px !important;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    transition: .3s ease-in-out;
+}
+.calc-btn:hover{
+    background: #000;
+    color: #a3eeee;
+}
+.hour{
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 15% !important;
+    transition: .7s ease-in-out;
+    z-index: 1;
+}
+.hour p{
+    font-size: 42px;
+}
+
+/* vİZYON & MİSYON - HAKKIMIZDA */
+.v_m{
+    max-width: 70%;
+    background: #fff;
+    position:absolute;
+    margin-bottom: 15% !important;
+    top: 25%;
+    left: 10%;
+    text-align: center;
+    justify-content: center;
+    padding: 5% 10%;
+    z-index: 0;
+    opacity: .5;
+}
+.v_m h1{
+    font-weight: 600;
+    color: #000 !important;
+    margin-bottom: 25px;
+}
+.v_m p{
+    color: #000;
+    font-size: 18px;
+}
+
+
+
+/* aPLLE SCREEN - MOBİLE */
+
+@media screen and (max-width:1440px) {
+    body{
+        overflow-y: scroll !important;
+
+    }
+    .calc-btn{
+        margin-left: 37% !important;
+        margin-bottom: -50px;
+    }
+    .hour{
+        position: relative;
+        margin-left: -6% !important;        
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width:1280px){
+    .calc-btn{
+        margin-left: 42% !important;
+    }
+    .hour{
+        margin-left: -1% !important;
+    }
+}
+@media screen and (max-width:768px){
+    section{
+        margin-top: 20%;
+        margin-left: 2%;
+    }
+    .text-box p{
+        width: 450px;
+        font-size: 18px;
+    }
+    .text-box input{
+        font-size: 18px;
+        padding-top: -5px !important;
+        margin-right: 12%;
+    }
+    .calc-btn{
+        padding: 0!important;
+        margin-left: 40% !important;
+        margin-bottom: -50px;
+        font-size: 20px;
+    }
+    .hour{
+        margin-left: -15px !important;
+        margin-bottom: 0px !important;
+    }
+    .hour p{
+        padding-bottom: -50px;
+    }
+}
+@media screen and (max-width:540px){
+    section{
+        margin-left: 10%;
+    }
+    .text-box input{
+        position: absolute;
+        font-size: 20px;
+        margin-left: 25%;
+        margin-top: 12%;
+    }
+    .calc-btn{
+        margin-left: 27% !important;
+        margin-top: 5% !important;
+        margin-bottom: -50px;
+        padding: 10px 5px !important;
+        font-size: 16px;
+    }
+    .hour{
+        margin-left: -10% !important;
+    }
+    .hour p{
+        font-size: 30px;
+        padding-bottom: 25px;
+    }
+}
+@media screen and (max-width:414px){
+    section{
+        margin-left: 5%;
+    }
+    .text-box p{
+        position: absolute;
+        width: 350px;
+        padding-left: 6% !important;
+        
+    }
+    .text-box{
+        padding-bottom: 75px !important;
+    }
+    .text-box input{
+        margin-top: 75px !important;
+        margin-left: 20%;
+    }
+    .calc-btn{
+        margin-left: 50% !important;
+        margin-bottom: -10px !important;
+    }
+    .hour{
+        margin-left: 10% !important;
+    }
+    .hour p{
+        font-size: 22px !important;
+    }
+}
+@media screen and (max-width:375px){
+    section{
+        margin-left: 2%;
+    }
+    .hour p{
+        margin-left: 5% !important;
+    }
+}

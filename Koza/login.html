@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="short icon" href="./img/book-bookmark-icon_34486.ico" type="img/x-icon">
+    <link rel="stylesheet" href="./CSS/login.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+        crossorigin="anonymous" />
+    <script src="./jquery.passwordstrength.js"></script>
+    <title>KOZA</title>
+</head>
+
+<body>
+
+    <form action="">
+        <!-- <img src="./img/user.png" alt=""> --><i id="user" class="fas fa-user"></i>
+        <div class="input-box">
+            <span><i class="fas fa-user"></i></span>
+            <input type="text" placeholder="Kullanıcı Adı" required>
+        </div>
+        <div class="input-box">
+            <span><i class="fas fa-key"></i></span>
+            <input type="password" id="password" placeholder="Şifre" required>
+        </div>
+        <div class="sign-up">
+            <button type="submit"><i class="fas fa-sign-in-alt"></i>Giriş</button>
+            <a href="./register.html">KAYIT OL</a>
+        </div>
+    </form>
+
+    <script type="text/javascript">
+        $(function () {
+            $("#password").passwordStrength();
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="short icon" href="./img/book-bookmark-icon_34486.ico" type="img/x-icon">
+    <link rel="stylesheet" href="./CSS/v_m.css">
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <title>KOZA</title>
+</head>
+
+<body>
+
+    <header id="header">
+        <a href="#home" class="logo">KOZA</a>
+        <div id="toggle"></div>
+        <div id="navbar">
+            <ul>
+                <li><a href="index.php">Anasayfa</a></li>
+                <li><a href="pricing.html">Satın Al</a></li>
+                <li><a href="v_m.html">Vizyon&Misyon</a></li>
+                <li><a href="aboutus.html">Hakkımızda</a></li>
+                <li><a href="login.html">Giriş</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="v_m">
+        <h1>Hakkımızda</h1>
+        <p>Bu uygulama Sakarya Üniversitesinde Girişimcilik ve Proje Yönetimi dersi için biraraya gelen
+             altı öğrenci tarafından yapılmıştır. Projenin amacı insanların zamanlarını iyi planlayıp 
+             daha fazla kitap okumalarını sağlamaktır. Bu doğrultuda gerçekleştirdiğimiz projenin
+             insanların daha fazla okumasını sağlayarak farkındalık oluşturmaktır.         
+        </p>
+        <h1>Uygulama Hakkında</h1>
+        <p>
+            Sizden belli sayfalardaki kelime saylarını istememizin sebebi kitaptaki ortalama kelime sayısını buldurmaktır.
+            Başlangıç ve sondaki sayfaların kelime sayıları genellikle bölüm sonu ve bölüm başındaki kelime sayılarıyla 
+            yaklaşık olarak aynı olduğu için hesaplatıyoruz. Orta sayfalardaki kelime sayıları da genellikle kelimelerin
+            en yoğun olduğu kısımlar olduğu için her aralıktan kelime sayısının bulunduğu sayfaları toplayarak bir ortalama elde ediyoruz.
+        </p>
+        
+    </div>
+
+
+
+    <script>
+        const header = document.getElementById('header');
+        const toggle = document.getElementById('toggle');
+        const navbar = document.getElementById('navbar');
+
+        document.onclick = function (e) {
+            if (e.target.id !== 'header' && e.target.id !== 'toggle' && e.target.id !== 'navbar') {
+                toggle.classList.remove('active');
+                navbar.classList.remove('active');
+            }
+        }
+
+        toggle.onclick = function () {
+            toggle.classList.toggle('active');
+            navbar.classList.toggle('active');
+        }
+    </script>
+
+</body>
+
+</html>
